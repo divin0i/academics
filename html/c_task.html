@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Creation</title>
+</head>
+<body>
+    <h1>Create Task</h1>
+    <form action="c_task.php" method="POST">
+        <label>Task to Do:</label><br>
+        <input type='text' id='task' name='task' required><br><br>
+        <label>Date due: </label required><br>
+        <input type='date' id='date_due' name='date_due'><br><br>
+        <label>Status: </label><br>
+        <select id="status" name='Status'>
+            <option value="in progress"> In Progress</option>
+            <option value="done"> Done</option>
+            <option value="dropped"> Dropped</option>
+        </select><br><br>
+        <input type='submit' value='Submit Task'>
+    </form>
+</body>
+</html>

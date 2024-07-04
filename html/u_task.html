@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Task</title>
+</head>
+<body>
+    <h1>Update Task</h1>
+    <form action="u_task.php" method="POST">
+        <input type="hidden" id="task_id" name="task_id" value="<?php echo $_GET['id']; ?>">
+
+        <label for="task">Task:</label><br>
+        <input type="text" id="task" name="task" required value="<?php echo '$task['task']'; ?>"><br><br>
+
+        <label for="date_due">Date Due:</label><br>
+        <input type="date" id="date_due" name="date_due" required value="<?php echo $task['date_due']; ?>"><br><br>
+
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="in progress" <?php if ($task['status'] == 'in progress') echo 'selected'; ?>>In Progress</option>
+            <option value="done" <?php if ($task['status'] == 'done') echo 'selected'; ?>>Done</option>
+            <option value="dropped" <?php if ($task['status'] == 'dropped') echo 'selected'; ?>>Dropped</option>
+        </select><br><br>
+
+        <input type="submit" value="Update Task">
+    </form>
+</body>
+</html>
