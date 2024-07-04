@@ -8,13 +8,13 @@ function sendReminderEmail($to, $subject, $body) {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host = 'divinwest6.gmail.com';
+        $mail->Host = 'example.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'divinwest6@gmail.com';
-        $mail->Password = 'HP@l1510';
+        $mail->Username = 'example@gmail.com';
+        $mail->Password = '-----';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
-        $mail->setFrom('divinwest6@gmail.com', 'Task Reminder');
+        $mail->setFrom('example@gmail.com', 'Task Reminder');
         $mail->addAddress($to);
         $mail->isHTML(true);
         $mail->Subject = $subject;
